@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shree Krishna Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9ff;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky glass header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      transition: 0.3s ease;
+    }
+    header.small { padding: 0.5rem 2rem; }
+    header img { height: 50px; transition: 0.3s; }
+    header.small img { height: 35px; }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+    nav a:hover {
+      background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Hero section */
+    .hero {
+      background: url('images/hero.jpg') center/cover no-repeat;
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 700px;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-content a {
+      background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+      padding: 0.8rem 1.8rem;
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .hero-content a:hover {
+      background: linear-gradient(45deg, #5c6bc0, #3f51b5);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #3f51b5;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Card sections */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      color: #3f51b5;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #3f51b5;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 10000;
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-wrap: wrap; justify-content: center; }
+      .hero-content h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader" data-aos="fade-down">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <img src="images/logo.png">
+      <h1>Shree Krishna Creative</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
+      <h1>Radhey Radhey ✨</h1>
+      <p>Where Tradition Meets Innovation in Textile Design</p>
+      <a href="#contact">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      At <strong>Shree Krishna Creative</strong>, we are passionate about redefining textile excellence. From intricate pattern designs to full-scale garment production, we serve brands and businesses who demand both style and substance.
+    </p>
+  </section>
+
+  <section id="services" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card" data-aos="flip-left">
+        <h3>Pattern Designing</h3>
+        <p>Tailored textile pattern designing with precision and creativity.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="100">
+        <h3>Fabric Printing</h3>
+        <p>Advanced printing & eco-friendly dyeing for sustainable fashion.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Garment Manufacturing</h3>
+        <p>High-quality garment production to meet global standards.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="300">
+        <h3>Wholesale & Retail</h3>
+        <p>Strong distribution channels for all your textile needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" data-aos="fade-up">
+    <h2>Our Products</h2>
+    <div class="card-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="images/PRODUCT1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Elegant design crafted with precision.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/PRODUCT2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Premium fabric with traditional patterns.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/PRODUCT3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>High-quality textile suited for all seasons.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/PRODUCT4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Modern touch to classical fashion trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">
+      <strong>Name:</strong> Ritik Mishra <br>
+      <strong>Email:</strong> mishraritik526@gmail.com <br>
+      <strong>Phone:</strong> +91-6239136116 <br>
+      <strong>Address:</strong> Shop No. 1, Verka Bypass, Amritsar, Punjab, India
+    </p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Shree Krishna Creative. Built with passion and precision.</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/916239136116?text=Hello%2C%20I%20am%20interested%20in%20your%20services." target="_blank">&#x1F4AC;</a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.add('small');
+      } else {
+        header.classList.remove('small');
+      }
+    });
+  </script>
+
+</body>
+</html>
